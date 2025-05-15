@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+body.contraste {
+  background-color: #000;
+  color: #fff;
+}
+
+.container {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #3b3b8f;
+}
+
+.btn-contraste {
+  padding: 10px 15px;
+  background-color: #3b3b8f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+
+body.contraste .card {
+  background-color: #111;
+}
+
+.ilustracion {
+  width: 100%;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  object-fit: cover;
+  max-height: 400px;
+}
+
+.contenido {
+  text-align: center;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.controles {
+  margin-bottom: 20px;
+}
+
+.btn-audio {
+  background-color: #ff9800;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+audio {
+  vertical-align: middle;
+}
+
+.interprete {
+  margin-top: 20px;
+}
+
+.interprete video {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+body.contraste video {
+  filter: brightness(1.2);
+}
+
+/* SLIDER */
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  animation: slideIn 0.6s ease-in-out forwards;
+}
+
+.slide.active {
+  display: block;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.navegacion {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.navegacion button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  border: none;
+  background-color: #3b3b8f;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+body.contraste .navegacion button {
+  background-color: #fff;
+  color: #000;
+}
+/* Contenedor del selector de voz */
+.controles {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+/* Etiqueta del selector */
+.controles label {
+  font-weight: bold;
+  color: #3b3b8f;
+}
+
+/* Selector de voz */
+#selectVoz {
+  padding: 10px 15px;
+  border: 2px solid #3b3b8f;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #333;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+#

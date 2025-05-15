@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Universo de Simón - Escena 2</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial Rounded MT Bold', sans-serif;
+      background: radial-gradient(ellipse at center, #0d0d2b, #000);
+      overflow: hidden;
+      color: white;
+    }
+
+    .scene {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: transparent url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjdycHFkZnpicGduZjkzbDY2enRtOWlrcXM3d295aHZmNjZjcjA5OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/SVrgJrUTp0z9fFtA9B/giphy.gif') repeat;
+      animation: moveStars 40s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes moveStars {
+      from { background-position: 0 0; }
+      to { background-position: -10000px 5000px; }
+    }
+
+    .text-box {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      background-color: rgba(0, 0, 50, 0.6);
+      padding: 2rem;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 0 30px rgba(173, 216, 230, 0.3);
+    }
+
+    .text-box h1 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .text-box p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+
+    .button-container {
+      margin-top: 1.5rem;
+    }
+
+    .color-btn {
+      padding: 0.5rem 1rem;
+      margin: 0 0.5rem;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .azul { background-color: #4fa3ff; color: white; }
+    .amarillo { background-color: #ffe44d; }
+    .morado { background-color: #c86bfa; color: white; }
+  </style>
+</head>
+<body>
+  <div class="scene">
+    <div class="stars"></div>
+    <div class="text-box">
+      <h1>Una señal desde las estrellas</h1>
+      <p>
+        Simón entrecerró los ojos. En lo más profundo del cielo, una estrella parpadeaba de una manera extraña. 
+        Como si le hablara sin palabras. De pronto, un suave zumbido envolvió la habitación, 
+        y todo a su alrededor se desvaneció. Ya no estaba en su cuarto. Estaba flotando. 
+        Flotando en un universo que solo él podía sentir.
+      </p>
+      <div class="button-container">
+        <button class="color-btn azul" onclick="cambiarFondo('#0d0d2b')">Azul – Calma</button>
+        <button class="color-btn amarillo" onclick="cambiarFondo('#332b00')">Amarillo – Curiosidad</button>
+        <button class="color-btn morado" onclick="cambiarFondo('#2a0033')">Morado – Asombro</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="background-audio" autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2022/10/09/audio_ea10cbe508.mp3?filename=ambient-space-113990.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    function cambiarFondo(color) {
+      document.body.style.background = `radial-gradient(ellipse at center, ${color}, #000)`;
+      navigator.vibrate?.([100, 50, 100]); // vibración para móviles si está disponible
+    }
+  </script>
+</body>
+</html>

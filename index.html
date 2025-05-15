@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>El Universo de Simón</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>El Universo de Simón</h1>
+      <button class="btn-contraste" onclick="toggleContraste()">🌓 Contraste</button>
+      <div class="controles">
+        <label for="selectVoz">Seleccionar voz:</label>
+        <select id="selectVoz"></select>
+      </div>
+      
+    </header>
+
+    <div class="slider">
+      <div class="slide active">
+        <img src="img/escena1.png" alt="Simón observando las estrellas" class="ilustracion" />
+        <div class="contenido">
+          <p id="texto1">Una noche clara y silenciosa, Simón salió al jardín y levantó la mirada al cielo inmenso. Las estrellas brillaban con tanta intensidad que parecía que parpadeaban solo para él. En ese instante mágico, sintió que aquellas luces lejanas le hablaban en un idioma misterioso, un lenguaje antiguo que parecía venir desde lo más profundo del universo. Aunque no entendía las palabras, su corazón sí las sentía.</p>
+          <div class="controles">
+            <button class="btn-audio" onclick="leerTexto('texto1')">🔊 Leer</button>
+            <audio src="audio/narracion.mp3" controls></audio>
+          </div>
+          <div class="interprete">
+            <video src="video/lsc1.mp4" controls></video>
+            <p>Lengua de Señas Colombiana</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="img/escena_2.png" alt="Simón viajando entre planetas" class="ilustracion" />
+        <div class="contenido">
+          <p id="texto2">Esa misma noche, Simón soñó que construía su propio cohete con luces de luciérnaga y motores de imaginación. Al despegar, voló más allá de la Luna y cruzó galaxias de colores brillantes. En cada planeta que visitaba, descubría que tenían voces distintas: unos hablaban con sonidos musicales, otros con luces y destellos. Simón escuchaba con asombro, aprendiendo que cada mundo tenía una historia única por contar.</p>
+          <div class="controles">
+            <button class="btn-audio" onclick="leerTexto('texto2')">🔊 Leer</button>
+            <audio src="audio/narracion2.mp3" controls></audio>
+          </div>
+          <div class="interprete">
+            <video src="video/lsc2.mp4" controls></video>
+            <p>Lengua de Señas Colombiana</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="img/escena_3.png" alt="Simón junto a un planeta amigo" class="ilustracion" />
+        <div class="contenido">
+          <p id="texto3">Después de su largo viaje entre estrellas y planetas, Simón regresó a casa con el alma llena de maravillas. Se dio cuenta de que no hacía falta ir muy lejos para entender el universo. Solo bastaba cerrar los ojos, escuchar el silencio y mirar con atención. Porque el universo, tan vasto e infinito, también escucha... pero solo a quienes se atreven a mirar con el corazón abierto y los sueños despiertos.</p>
+          <div class="controles">
+            <button class="btn-audio" onclick="leerTexto('texto3')">🔊 Leer</button>
+            <audio src="audio/narracion3.mp3" controls></audio>
+            
+          </div>
+          <div class="interprete">
+            <video src="video/lsc3.mp4" controls></video>
+            <p>Multimedia</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navegacion">
+      <button onclick="cambiarSlide(-1)">⬅ Anterior</button>
+      <button onclick="cambiarSlide(1)">Siguiente ➡</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
