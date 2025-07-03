@@ -29,10 +29,12 @@
       display: block;
     }
     .ilustracion {
-      max-height: 300px;
-      object-fit: cover;
-      width: 100%;
-    }
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
   </style>
 </head>
 <body>
@@ -97,7 +99,7 @@
           <!-- Ejemplo Slide -->
           <div class="slide active card p-3 mb-4">
             <img src="img/escena1.png" class="ilustracion mb-3" alt="Simón observando las estrellas">
-            <p id="texto1">Una noche clara y silenciosa, Simón salió al jardín...</p>
+            <p id="texto1">Una noche clara y silenciosa, Simón salió al jardín y levantó la mirada al cielo inmenso. Las estrellas brillaban con tanta intensidad que parecía que parpadeaban solo para él. En ese instante mágico, sintió que aquellas luces lejanas le hablaban en un idioma misterioso, un lenguaje antiguo que parecía venir desde lo más profundo del universo. Aunque no entendía las palabras, su corazón sí las sentía.</p>
             <div class="d-flex gap-3 mb-2">
               <button class="btn btn-primary" onclick="leerTexto('texto1')">🔊 Leer</button>
               <audio src="audio/narracion.mp3" controls></audio>
@@ -107,7 +109,34 @@
               <p>Lengua de Señas Colombiana</p>
             </div>
           </div>
-          <!-- Más slides... -->
+          <!-- Slide 2 -->
+      <div class="slide card p-3 mb-4">
+        <img src="img/escena_2.png" alt="Simón viajando entre planetas" class="ilustracion mb-3" />
+        <p id="texto2">Esa misma noche, Simón soñó que construía su propio cohete...</p>
+        <div class="d-flex gap-3 mb-2">
+          <button class="btn btn-primary" onclick="leerTexto('texto2')">🔊 Leer</button>
+          <audio src="audio/narracion2.mp3" controls></audio>
+        </div>
+        <div class="interprete">
+          <video src="video/lsc2.mp4" controls class="w-100 mb-1"></video>
+          <p>Lengua de Señas Colombiana</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide card p-3 mb-4">
+        <img src="img/escena_3.png" alt="Simón junto a un planeta amigo" class="ilustracion mb-3" />
+        <p id="texto3">Después de su largo viaje entre estrellas y planetas...</p>
+        <div class="d-flex gap-3 mb-2">
+          <button class="btn btn-primary" onclick="leerTexto('texto3')">🔊 Leer</button>
+          <audio src="audio/narracion3.mp3" controls></audio>
+        </div>
+        <div class="interprete">
+          <video src="video/lsc3.mp4" controls class="w-100 mb-1"></video>
+          <p>Lengua de Señas Colombiana</p>
+        </div>
+      </div>
+
         </div>
 
         <!-- Navegación del cuento -->
